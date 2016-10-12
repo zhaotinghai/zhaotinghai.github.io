@@ -72,59 +72,7 @@
             'bootstrapTable': [
                 // '//cdn.bootcss.com/bootstrap-table/1.10.1/bootstrap-table',
                 PATH_LIB + 'bootstrap-table/bootstrap-table'
-            ],
-            'bootstrap-daterangepicker':PATH_LIB + 'bootstrap-daterangepicker/daterangepicker',
-            'bootstrap-table-CN': [
-                '//cdn.bootcss.com/bootstrap-table/1.10.1/locale/bootstrap-table-zh-CN',
-                PATH_LIB + 'bootstrap-table/locale/bootstrap-table-zh-CN'
-            ],
-            'layer': [
-                '//cdn.bootcss.com/layer/2.3/layer',
-                PATH_LIB + 'layer/layer'
-            ],
-            'bootstrapValidator': [
-                '//cdn.bootcss.com/bootstrap-validator/0.5.3/js/bootstrapValidator',
-                PATH_LIB + 'bootstrap-validator/js/bootstrapValidator'
-            ],
-            'bootstrapValidatorCN': [
-                '//cdn.bootcss.com/bootstrap-validator/0.5.3/js/language/zh_CN',
-                PATH_LIB + 'bootstrap-validator/js/language/zh_CN'
-            ],
-            'jqueryZtree': PATH_LIB + 'ztree/js/jquery.ztree.all.min',
-
-            'bootstrapDatepicker': PATH_LIB + 'bootstrap-datepicker/js/bootstrap-datepicker.min',
-            'bootstrapDatepickerCN': PATH_LIB + 'bootstrap-datepicker/js/bootstrap-datepicker.zh-CN.min',
-
-            'jqueryValidator': [
-                '//cdn.bootcss.com/jquery-validate/1.15.1/jquery.validate.min',
-                PATH_LIB + 'jquery-validator/jquery.validate.min'
-            ],
-            'jqueryValidatorAddMethods': [
-                '//cdn.bootcss.com/jquery-validate/1.15.1/additional-methods.min',
-                PATH_LIB + 'jquery-validator/additional-methods.min'
-            ],
-            'notice': PATH_LIB + 'notice/jquery-notice',
-            'bootmodal': PATH_LIB + 'bootmodal/bootModal.min',
-            'socketio': '../../../v3/web/chat/js/socket.io',
-            'xiaobeichat': '../../../v3/web/chat/xiaobeichat',
-            'utils': MODULE_MAIN + '/js/utils',
-            
-            'app': MODULE_MAIN + '/javascripts/app',
-            'aaaa': MODULE_MAIN + '/javascripts/aaaa',
-            //'routes': MODULE_MAIN + '/js/routes',
-            //'loader': MODULE_MAIN + '/js/loader',
-            //CSS配置 -- zhangfq
-            bootstrap_css: [
-                '//cdn.bootcss.com/bootswatch/3.3.5/cerulean/bootstrap.min',
-                PATH_LIB + 'bootstrap/css/bootstrap.min'
-            ],
-            navbar_css: MODULE_MAIN + '/css/navbar',
-            common_css: MODULE_MAIN + '/css/common',
-            modal_css: MODULE_MAIN + '/css/modal',
-            leftmenu_css: MODULE_MAIN + '/css/leftmenu',
-            jqueryNotice_css: MODULE_MAIN + '/css/jqueryNotice',
-            bootstrap_table_css: PATH_LIB + 'bootstrap-table/bootstrap-table.min',
-            ztree_css: PATH_LIB + 'ztree/css/zTreeStyle'
+            ]
 	    },
 	    shim : {
 	        bootstrap : {
@@ -150,17 +98,8 @@
             }
         },
         deps: [
-            // //  启动加载的css文件
-            // 'css!bootstrap_css', 'css!navbar_css', 'css!bootstrap_table_css',
-            // 'css!common_css', 'css!leftmenu_css', 'css!jqueryNotice_css', 'css!modal_css',
-            // //  启动加载的js文件
             'app'
         ],
         urlArgs: 'bust=1'// + (new Date()).getTime()
 	});
-
-    // require(['angular', 'bootstrap', 'less', 'routes'], function(angular){
-    //     angular.bootstrap(document, ['webapp']);
-    // });
-
 }( window );
