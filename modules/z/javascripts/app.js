@@ -30,7 +30,7 @@ define(['jquery', 'async', 'angular', 'angular-ui-router', 'sprintf'], function(
             angular.forEach(data.routes, function(v, i) {
                 var controller = sprintf('%s/controllers/%s', v.module, v.view);
                 var templateUrl = sprintf('%s/%s/views/%s/%s.html', baseUrl, v.module, LANGUAGE, v.view);
-                console.log(templateUrl)
+                // console.log(templateUrl)
                 var state = ( (v.module == data.main)?"":data.state ) + v.state;
                 
                 $stateProvider.state(state, {
