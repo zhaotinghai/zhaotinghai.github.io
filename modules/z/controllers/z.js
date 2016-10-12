@@ -6,9 +6,9 @@ define(['jquery', 'echarts'], function ($, echarts) {
 
     var URL_GET_LOG = '/log';
 
-    return ['$scope','$rootScope', '$http', '$timeout', '$watch',
+    return ['$scope','$rootScope', '$http', '$timeout',
 
-    function ($scope,$rootScope, $http, $timeout, $alert, $watch) {
+    function ($scope, $rootScope, $http, $timeout, $alert) {
 
         $scope.x=function(){
             
