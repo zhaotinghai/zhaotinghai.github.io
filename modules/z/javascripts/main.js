@@ -72,7 +72,8 @@
             'bootstrapTable': [
                 // '//cdn.bootcss.com/bootstrap-table/1.10.1/bootstrap-table',
                 PATH_LIB + 'bootstrap-table/bootstrap-table'
-            ]
+            ],
+            'app': MODULE_MAIN + '/javascripts/app'
 	    },
 	    shim : {
 	        bootstrap : {
