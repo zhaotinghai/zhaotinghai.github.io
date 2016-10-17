@@ -23,10 +23,10 @@
                 '//cdn.bootcss.com/requirejs-plugins/1.0.3/json.min',
                 PATH_LIB + 'requirejs-plugins/1.0.3/json.min'
             ],
-	    	'less'			: '//cdn.bootcss.com/less.js/2.7.1/less.min',
+	    	'less'			  : '//cdn.bootcss.com/less.js/2.7.1/less.min',
 	        'bootstrap'       : '//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min',  
 	        'angular'         : '//cdn.bootcss.com/angular.js/1.5.6/angular.min',  
-	        'angular-route' : '//cdn.bootcss.com/angular.js/1.5.6/angular-route.min',
+	        'angular-route'   : '//cdn.bootcss.com/angular.js/1.5.6/angular-route.min',
             'angular-ui-router' : '//cdn.bootcss.com/angular-ui-router/1.0.0-alpha0/angular-ui-router.min',
             'routes'            : MODULE_MAIN + '/javascripts/routes',
             'jquery': [
@@ -49,6 +49,10 @@
                 '//cdn.bootcss.com/echarts/3.2.2/echarts.min',
                 PATH_LIB + 'echarts/echarts.min'
             ],
+            'angularAMD': [
+                '//cdn.jsdelivr.net/angular.amd/0.2/angularAMD.min',
+                PATH_LIB + 'angularjs/angularAMD'
+            ],
             'angular': [
                 '//cdn.bootcss.com/angular.js/1.5.7/angular',
                 PATH_LIB + 'angularjs/angular'
@@ -61,10 +65,6 @@
                 '//cdn.bootcss.com/angular-ui-router/0.2.18/angular-ui-router',
                 PATH_LIB + 'ui-router/angular-ui-router'
             ],
-            'angularAMD': [
-                '//cdn.jsdelivr.net/angular.amd/0.2/angularAMD.min',
-                PATH_LIB + 'angularjs/angularAMD'
-            ],
             'bootstrap': [
                 '//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap',
                 PATH_LIB + 'bootstrap/js/bootstrap'
@@ -73,7 +73,11 @@
                 // '//cdn.bootcss.com/bootstrap-table/1.10.1/bootstrap-table',
                 PATH_LIB + 'bootstrap-table/bootstrap-table'
             ],
-            'app': MODULE_MAIN + '/javascripts/app'
+            'app': MODULE_MAIN + '/javascripts/app',
+            'font-awesome':[
+                '//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min'
+
+            ]
 	    },
 	    shim : {
 	        bootstrap : {
@@ -95,10 +99,12 @@
         map: {
             '*': {
                 css: 'require/css',
+                'less': PATH_LIB + 'require-less/less',
                 echarts : 'echarts3'
             }
         },
         deps: [
+            'css!font-awesome',
             'app'
         ],
         urlArgs: 'bust=1'// + (new Date()).getTime()

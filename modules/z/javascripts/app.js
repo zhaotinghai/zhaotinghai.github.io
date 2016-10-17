@@ -1,8 +1,7 @@
-define(['jquery', 'async', 'angular', 'angular-ui-router', 'sprintf'], function($, async, angular){
+define(['angularAMD', 'jquery', 'async', 'angular', 'angular-ui-router', 'sprintf'], function(angularAMD, $, async, angular){
 //'angular-ui-router'  'angular-messages', 'angular-route'
 
     var app = angular.module('app', ['ui.router']); //, 'ngRoute'
-
 
     var URL_ROUTES = "init/z/route.json";
 
@@ -24,6 +23,7 @@ define(['jquery', 'async', 'angular', 'angular-ui-router', 'sprintf'], function(
 
         function success(data) {
 
+            //$urlRouterProvider.when("", data.home);
             $urlRouterProvider.when("", data.home);
             //$urlRouterProvider.otherwise(data.home);
 
@@ -54,14 +54,16 @@ define(['jquery', 'async', 'angular', 'angular-ui-router', 'sprintf'], function(
         }
 
         function fail(data) {
-            console.log(data);
-            console.log("error");
+            console.log("error", data);
         }
     }
 
     function run ($rootScope, $state, $http) {
         console.log('app.run')
     }
-    angular.bootstrap(document, ['app']);
+    
+    //angular.bootstrap(document, ['app']);
+    angularAMD.bootstrap(app);
+
     return app;
 });
